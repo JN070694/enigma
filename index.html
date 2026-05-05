@@ -76,7 +76,9 @@
 
     <div class="intro">
         <h1>Introduction:</h1>
-        <p>This is the introduction section. You can add an overview or background information here.</p>
+        <p>Welcome to my Digital Nomad VPN Setup — the modern “Enigma” machine.</p>
+        <p>This project is a reliable, always-on home VPN server built around a Raspberry Pi (located in the US) paired with a GL.iNet travel router. It allows an expat to work from anywhere in the world — such as South America — while keeping a domestic IP address.</p>
+        <p>Whether for work restrictions, accessing US-only services, banking security, or simply maintaining a consistent digital footprint, this setup routes all my traffic through my home connection. It’s clean, secure, fast, and gives one the freedom of true location independence without compromising on access or privacy.</p>
         <ul>
             <li>Hardware</li>
             <li>Software</li>
@@ -84,47 +86,89 @@
         </ul>
     </div>
 
-    <!-- Chapter -->
-    <div class="chapter">
-        <h1>Hardware</h1>
-        <ul>
-            <li>Raspberry Pi</li>
-            <li>GL.iNet</li>
-            <li>SSD (to boot from)</li>
-            <li>M.2 HAT+</li>
-            <li>Raspberry Pi Enclosure</li>
-        </ul>
-    </div>
+<!-- Chapter -->
+<div class="chapter">
+    <h1>Hardware</h1>
+    <ul>
+        <li>Ethernet Cable (for stable connection)</li>
+        <li>GL.iNet Router(s) — 2x recommended (1 home server + 1 travel client)</li>
+        <li>M.2 HAT+</li>
+        <li>NVMe SSD</li>
+        <li>Raspberry Pi (Pi 4 or Pi 5, 4GB+ recommended)</li>
+        <li>Raspberry Pi Enclosure (with good cooling)</li>
+        <li>Reliable Power Supply (official or high-quality 5V/3A+)</li>
+        <li>Uninterruptible Power Supply (UPS)</li>
+    </ul>
+</div>
 
-    <!-- Chapter -->
-    <div class="chapter">
-        <h1>Software</h1>
-        <ul>
-            <li>PiVPN, (Wireguard)</li>
-            <li>Bullet point</li>
-            <li>Bullet point</li>
-        </ul>
-    </div>
+<!-- Chapter -->
+<div class="chapter">
+    <h1>Software</h1>
+    <ul>
+        <li>Fail2Ban (security)</li>
+        <li>Pi-hole (ad-blocking + local DNS)</li>
+        <li>PiVPN (WireGuard)</li>
+        <li>Raspberry Pi OS (64-bit Lite)</li>
+        <li>Unbound (secure recursive DNS)</li>
+        <li>WireGuard Tools & qrencode (for QR code configs)</li>
+    </ul>
+</div>
 
-    <!-- Chapter -->
-    <div class="chapter">
-        <h1>Wireguard</h1>
-        <ul>
-            <li>Bullet point</li>
-            <li>Bullet point</li>
-            <li>Bullet point</li>
-        </ul>
-    </div>
+<!-- Chapter -->
+<div class="chapter">
+    <h1>Network & Configuration</h1>
+    <ul>
+        <li>Dynamic DNS (DuckDNS, No-IP, or custom domain)</li>
+        <li>Port Forwarding (UDP 51820 or custom port)</li>
+        <li>Static Local IP for Raspberry Pi</li>
+        <li>UPnP (optional, if supported by your router)</li>
+    </ul>
+</div>
 
-    <!-- Chapter -->
-    <div class="chapter">
-        <h1>Chapter:</h1>
-        <ul>
-            <li>Bullet point</li>
-            <li>Bullet point</li>
-            <li>Bullet point</li>
-        </ul>
-    </div>
+<!-- Chapter -->
+<div class="chapter">
+    <h1>Client Side (Uruguay)</h1>
+    <ul>
+        <li>GL.iNet Travel Router (as WireGuard client — recommended)</li>
+        <li>WireGuard App (on laptop, phone, tablet as backup)</li>
+        <li>USB-C Ethernet Adapter (for laptop if needed)</li>
+    </ul>
+</div>
+
+<!-- Chapter -->
+<div class="chapter">
+    <h1>Backup & Monitoring</h1>
+    <ul>
+        <li>Tailscale or ZeroTier (backup VPN — highly recommended)</li>
+        <li>Uptime Monitoring (UptimeRobot or similar)</li>
+        <li>Multiple Client Configs (stored securely)</li>
+        <li>Documentation (save all keys, DDNS, ports, etc.)</li>
+    </ul>
+</div>
+
+<!-- Chapter -->
+<div class="chapter">
+    <h1>Preparation & Testing</h1>
+    <ul>
+        <li>Assemble and boot Raspberry Pi with NVMe SSD</li>
+        <li>Configure static local IP address for the Pi</li>
+        <li>Install Raspberry Pi OS and run updates</li>
+        <li>Install and configure PiVPN (WireGuard server)</li>
+        <li>Set up Dynamic DNS (DuckDNS / No-IP / etc.)</li>
+        <li>Configure port forwarding on home router (UDP 51820 or custom)</li>
+        <li>Install Pi-hole + Unbound + Fail2Ban</li>
+        <li>Generate and test multiple WireGuard client configs</li>
+        <li>Set up GL.iNet travel router as WireGuard client</li>
+        <li>Test full VPN connection from external networks (coffee shop, mobile hotspot, friend’s house)</li>
+        <li>Test connection stability and speed (upload from TN should be solid)</li>
+        <li>Test failover with Tailscale / ZeroTier</li>
+        <li>Verify local network access (if needed: NAS, printers, etc.)</li>
+        <li>Create full documentation (configs, passwords, DDNS, recovery steps)</li>
+        <li>Simulate power outage / reboot and verify auto-reconnect</li>
+        <li>Pack checklist: Travel router, power supplies, Ethernet cables, SSD backup</li>
+        <li>Final test run 24–48 hours before departure</li>
+    </ul>
+</div>
 
     <!-- Chapter -->
     <div class="chapter">
@@ -304,26 +348,8 @@
         <h1>Attachments:</h1>
         <ul>
             <li><a href="https://www.xda-developers.com/wireguard-vpn-raspberry-pi-5/" target="_blank">Source 1</a></li>
-            <li><a href="https://www.reddit.com/r/digitalnomad/comments/venix5/explain_like_im_5_raspberry_pi_glinet_and_vpns=" target="_blank">Attachment 2</a></li>
-            <li><a href="https://www.youtube.com/watch?v=-wNLvg7u_n0" target="_blank">Source 3</a></li>
-            <li><a href="Attachment_4.pdf" target="_blank">Attachment 4</a></li>
-            <li><a href="Attachment_5.pdf" target="_blank">Attachment 5</a></li>
-            <li><a href="Attachment_6.pdf" target="_blank">Attachment 6</a></li>
-            <li><a href="Attachment_7.pdf" target="_blank">Attachment 7</a></li>
-            <li><a href="Attachment_8.pdf" target="_blank">Attachment 8</a></li>
-            <li><a href="Attachment_9.pdf" target="_blank">Attachment 9</a></li>
-            <li><a href="Attachment_10.pdf" target="_blank">Attachment 10</a></li>
-            <li><a href="Attachment_11.pdf" target="_blank">Attachment 11</a></li>
-            <li><a href="Attachment_12.pdf" target="_blank">Attachment 12</a></li>
-            <li><a href="Attachment_13.pdf" target="_blank">Attachment 13</a></li>
-            <li><a href="Attachment_14.pdf" target="_blank">Attachment 14</a></li>
-            <li><a href="Attachment_15.pdf" target="_blank">Attachment 15</a></li>
-            <li><a href="Attachment_16.pdf" target="_blank">Attachment 16</a></li>
-            <li><a href="Attachment_17.pdf" target="_blank">Attachment 17</a></li>
-            <li><a href="Attachment_18.pdf" target="_blank">Attachment 18</a></li>
-            <li><a href="Attachment_19.pdf" target="_blank">Attachment 19</a></li>
-            <li><a href="Attachment_20.pdf" target="_blank">Attachment 20</a></li>
-            <li><a href="https://www.example.com" target="_blank">Web Link Example</a></li>
+            <li><a href="https://www.youtube.com/watch?v=-wNLvg7u_n0" target="_blank">Source 2</a></li>
+            <li><a href="https://www.reddit.com/r/digitalnomad/comments/venix5/explain_like_im_5_raspberry_pi_glinet_and_vpns/" target="_blank">Source 3</a></li>
         </ul>
     </div>
 
